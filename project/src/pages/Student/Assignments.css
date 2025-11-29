@@ -1,0 +1,52 @@
+.student-assignments { padding: 1.5rem; }
+
+.page-header h1 { margin: 0 0 0.25rem 0; }
+.page-header p { margin: 0 0 1rem 0; color: #555; }
+
+.assignments-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+
+.assignment-card .card-header { display: flex; align-items: center; justify-content: space-between; }
+.assignment-body { padding-top: 0.5rem; }
+.assignment-meta { display: flex; gap: 0.5rem; align-items: center; }
+.assignment-course { color: #666; font-weight: 600; }
+.assignment-due { margin-top: 0.5rem; color: #444; }
+
+.status-badge { padding: 0.25rem 0.6rem; border-radius: 999px; font-weight: 700; text-transform: capitalize; }
+.status-badge.pending { background: #fef3c7; color: #92400e; }
+.status-badge.submitted { background: #d1fae5; color: #065f46; }
+.status-badge.graded { background: #e0f2fe; color: #0369a1; }
+
+.assignment-actions button { margin-left: 0.5rem; }
+
+/* Progress visuals for assignments */
+.assignment-card .card-header { padding: 0.9rem 1rem; }
+.assignment-body { padding-top: 0.5rem; display:flex; flex-direction:column; gap:12px }
+.assignment-meta { display:flex; justify-content:space-between; align-items:center }
+.assignment-course { color: #374151; font-weight:700 }
+.assignment-due { color:#475569; font-size:0.9rem }
+
+.assignment-progress { display:flex; flex-direction:column; gap:8px }
+.progress-label { display:flex; justify-content:space-between; align-items:center; font-size:0.9rem }
+.progress-track { height:12px; background: linear-gradient(90deg,#eef2ff,#f1f5f9); border-radius:999px; overflow:hidden }
+.progress-fill { height:100%; background: linear-gradient(90deg,#7c3aed,#10b981); border-radius:999px; transition: width 260ms ease }
+
+.status-badge.pending { background: linear-gradient(90deg,#fff7ed,#fde68a); color:#92400e }
+.status-badge.submitted { background: linear-gradient(90deg,#d1fae5,#b7f5d1); color:#065f46 }
+.status-badge.graded { background: linear-gradient(90deg,#e0f2fe,#bae6fd); color:#0369a1 }
+
+@media(max-width:700px){
+	.assignment-meta{flex-direction:column;align-items:flex-start;gap:6px}
+}
+
+/* Detail view grid */
+.detail-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
+.detail-card { min-height: 160px; }
+
+@media (max-width: 900px) {
+	.detail-grid { grid-template-columns: 1fr; }
+}

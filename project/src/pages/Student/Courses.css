@@ -1,0 +1,155 @@
+.student-courses {
+  padding: 1.5rem;
+}
+
+/* Colorful page banners for student pages */
+.student-courses .page-header,
+.student-explore .page-header,
+.student-assignments .page-header {
+  padding: 18px 20px;
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.06);
+}
+
+.student-courses .page-header {
+  background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+}
+
+.student-explore .page-header {
+  background: linear-gradient(90deg, #7c3aed 0%, #6d28d9 100%);
+}
+
+.student-assignments .page-header {
+  background: linear-gradient(90deg, #fb923c 0%, #f97316 100%);
+}
+
+.student-courses .page-header p,
+.student-explore .page-header p,
+.student-assignments .page-header p {
+  color: rgba(255,255,255,0.92);
+  margin-top: 6px;
+}
+
+.page-header h1 {
+  margin: 0 0 0.25rem 0;
+}
+
+.page-header p {
+  margin: 0 0 1rem 0;
+  color: #555;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.course-card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-body {
+  padding-top: 0.5rem;
+}
+
+.course-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.instructor {
+  margin: 0 0 0.5rem 0;
+  color: #666;
+}
+
+.progress-line {
+  background: #eee;
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #667eea);
+  transition: width 0.3s ease;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.course-card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.course-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(2,6,23,0.08); }
+
+.course-image { border-radius: 8px; box-shadow: 0 6px 20px rgba(2,6,23,0.04); }
+
+/* Explore card polish */
+.course-card .card-header { padding: 0.75rem 1rem; }
+.course-card .card-title { font-size: 1rem; color: #0f172a; }
+.course-card .card-actions { align-items: center; }
+
+.course-image-wrap { position: relative; border-radius: 10px; overflow: hidden; }
+.course-image { width: 100%; height: 160px; object-fit: cover; display: block; transition: transform 0.35s ease; }
+.course-image-wrap:hover .course-image { transform: scale(1.04); }
+.image-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2,6,23,0.06) 0%, rgba(2,6,23,0.18) 80%); pointer-events: none; }
+
+.btn-register { position: absolute; right: 12px; bottom: 12px; z-index: 6; background: linear-gradient(90deg,#7c3aed,#6d28d9); color: white; border: none; padding: 0.45rem 0.8rem; border-radius: 999px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 26px rgba(109,40,217,0.12); transition: transform 0.16s ease, box-shadow 0.16s ease; }
+.btn-register:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(109,40,217,0.16); }
+
+.instructor-badge { position: absolute; left: 12px; bottom: 12px; z-index: 6; background: rgba(255,255,255,0.92); padding: 4px; border-radius: 999px; box-shadow: 0 8px 20px rgba(2,6,23,0.06); }
+.instructor-badge .avatar { width: 36px; height: 36px; border-radius: 50%; display: block; }
+
+.course-card .short { margin-top: 0.75rem; color: #374151; }
+
+/* make the enroll actions look nicer */
+.course-actions .btn-sm { background: rgba(15, 23, 42, 0.04); border: none; padding: 0.4rem 0.65rem; }
+.course-actions .btn-sm.btn-primary { background: linear-gradient(90deg,#6d28d9,#7c3aed); color: white; }
+
+.status-badge {
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.06);
+  text-transform: capitalize;
+}
+
+.status-badge.in-progress { background: rgba(103, 232, 249, 0.12); }
+.status-badge.completed { background: rgba(16,185,129,0.08); }
+
+.course-actions button {
+  margin-left: 0.5rem;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+}
+
+.btn-sm {
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  background: #f3f4f6;
+  border: none;
+}
+
+.btn-sm.btn-primary {
+  background: #667eea;
+  color: white;
+}

@@ -1,0 +1,28 @@
+.student-progress{padding:24px}
+.page-header h1{margin:0 0 6px}
+.page-header p{margin:0 0 18px;color:var(--muted,#6b7280)}
+
+.progress-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.progress-card{background:var(--card-bg,#fff);border:1px solid rgba(15,23,42,0.04);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+.progress-card h3{margin:0 0 12px;font-size:16px}
+.chart-wrap{height:220px;display:flex;align-items:center}
+.chart-svg{width:100%;height:100%}
+.chart-meta{display:flex;justify-content:space-between;margin-top:12px}
+.chart-meta .meta-item{display:flex;flex-direction:column;align-items:flex-start}
+.chart-meta .meta-item strong{font-size:18px}
+.chart-meta .meta-item span{font-size:12px;color:var(--muted,#6b7280)}
+
+@media (max-width:900px){
+  .progress-grid{grid-template-columns:1fr}
+}
+
+/* bar chart styles */
+.bars-wrap{padding:6px 0}
+.bar-svg{width:100%;height:100%}
+.bar-rect{transition:transform 120ms ease, opacity 120ms ease}
+.bar-group:hover .bar-rect{transform:translateY(-6px);opacity:0.95}
+
+/* small screens: make SVG scale down nicely */
+@media (max-width:420px){
+  .chart-meta{flex-direction:column;gap:8px}
+}
